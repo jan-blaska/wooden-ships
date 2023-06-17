@@ -72,7 +72,7 @@ const Animation = () => {
 							height={0}
 							width={0}
 							sizes="100vw"
-							style={{ width: "600px" }}
+							style={{ width: "450px" }}
 						/>
 					</div>
 					<div className="wave" id="wave1"></div>

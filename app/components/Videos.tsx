@@ -1,7 +1,7 @@
 'use client';
 
 import { youtubeVideos } from "../util/data";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 
@@ -16,14 +16,15 @@ const Videos = () => {
 		}
 	}
 
-
-	window.addEventListener('resize', changeWindowWidthMobile);
+	useEffect(() => {
+		window.addEventListener('resize', changeWindowWidthMobile);	
+	});
 
 	return (
 		<div id="videos">
 
 			<div className="flex flex-col justify-center items-center py-24 px-8">
-				<h3 className="text-white border-b-[2px] pb-3 px-4 mb-6 border-purple-600 uppercase text-3xl lg:max-w-7xl">
+				<h3 className="text-white border-b-[2px] pb-3 px-4 mb-8 border-purple-600 uppercase text-3xl lg:max-w-7xl">
 					Videa
 				</h3>
 				{/* VIDEA Z YOUTUBE*/}
@@ -34,10 +35,8 @@ const Videos = () => {
 							</iframe>
 							{/* <h3 className="text-xl mt-1">{video.name}</h3> */}
 						</div>
-
 					))}
 				</div>
-
 			</div>
 			<Image
 				src="/images/adela-and-guitarists.jpg"

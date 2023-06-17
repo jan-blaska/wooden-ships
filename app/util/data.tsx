@@ -4,6 +4,16 @@ interface IYoutubeVideos {
     name: string;
 }
 
+interface IConcerts {
+    id: number;
+    name: string;
+    date: string; 
+    place: string;
+    fbUrl: string;
+}
+
+
+
 export const youtubeVideos: Array<IYoutubeVideos> = [
     {
         id: 1,
@@ -31,4 +41,16 @@ export const youtubeVideos: Array<IYoutubeVideos> = [
         name: "Wooden Ships - Studená noc",
     },
 ] 
+
+export const concerts: Array<IConcerts> = [
+    {
+        id: 1,
+        name: "Turbáza jede!",
+        date: "17/06/2023",
+        place: "Turistická chata na Prachově",
+        fbUrl: "https://www.facebook.com/events/257731546747812",
+    },
+   
+]
+
 

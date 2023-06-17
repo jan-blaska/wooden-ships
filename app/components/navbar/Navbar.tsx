@@ -1,9 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-
+import { Link } from "next-scroll";
+import { useState, useEffect } from 'react';
 
 const Navbar = () => {
 	const [navbar, setNavbar] = useState(false);
@@ -17,18 +16,18 @@ const Navbar = () => {
 		}
 	}
 
-	window.addEventListener('scroll', changeNavbarSize);
-
+	useEffect(() => {
+		window.addEventListener('scroll', changeNavbarSize);
+	})
 
 	return (
 		<div>
-			<nav className={`${scroll ? 'h-18' : 'h-36'} fixed w-full bg-black z-20 top-0 left-0 right-0`} >
+			<nav id="top" className={`${scroll ? 'h-18' : 'h-36'} fixed w-full bg-black z-20 top-0 left-0 right-0`} >
 				<div className="justify-between px-0 py-6 mx-auto md:flex md:items-center md:pr-8 lg:max-w-7xl">
 					<div>
 						<div className="flex justify-between items-center pl-8">
-							{/* flex items-center justify-between py-3 md:py-5 md:block */}
 							{/* LOGO */}
-							<Link href="/">
+							<Link to="top" duration={700}>
 								<Image
 									alt="Logo"
 									className="cursor-pointer"
@@ -56,7 +55,6 @@ const Navbar = () => {
 									)}
 								</button>
 							</div>
-
 						</div>
 					</div>
 
@@ -65,29 +63,30 @@ const Navbar = () => {
 								${navbar ? '' : 'hidden'} `}
 					>
 						<ul className="items-center justify-center md:flex">
-							<li className="uppercase py-4 md:py-0 text-xl text-white text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-								<Link href="#band" onClick={() => setNavbar(!navbar)}>
+							<li onClick={() => setNavbar(!navbar)} className="uppercase py-4 md:py-0 text-xl text-white text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent cursor-pointer">
+								<Link to="band" offset={50} duration={700}>
 									kapela
 								</Link>
 							</li>
-							<li className="uppercase py-4 md:py-0 md:pl-8 text-xl text-white text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-								<Link href="#videos" onClick={() => setNavbar(!navbar)}>
+							<li onClick={() => setNavbar(!navbar)} className="uppercase py-4 md:py-0 md:pl-8 text-xl text-white text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent cursor-pointer">
+								<Link to="videos" offset={50} duration={700}>
 									Videa
 								</Link>
 							</li>
-							<li className="uppercase py-4 md:py-0 md:pl-8 text-xl text-white text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-								<Link href="#concerts" onClick={() => setNavbar(!navbar)}>
+							<li 
+								onClick={() => setNavbar(!navbar)}
+								className="uppercase py-4 md:py-0 md:pl-8 text-xl text-white text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent cursor-pointer">
+								<Link to="concerts" offset={50} duration={700}>
 									Koncerty
 								</Link>
 							</li>
-							{/*<li className="uppercase py-4 md:py-0 md:pl-8 text-xl text-white text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
-								<Link href="#obchod" onClick={() => setNavbar(!navbar)}>
+							{/*<li onClick={() => setNavbar(!navbar)} className="uppercase py-4 md:py-0 md:pl-8 text-xl text-white text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent cursor-pointer">
+								<Link to="obchod">
 									Obchod
 								</Link>
 							</li>*/}
 						</ul>
 					</div>
-
 				</div>
 			</nav>
 		</div>

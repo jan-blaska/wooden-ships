@@ -113,7 +113,7 @@ section .waves .wave#wave4
 
 .logo-cloud {
 	position: absolute;
-	bottom: 300px;
+	bottom: 20vh;
 	left: -200px;
 	transform: translateX(50vw);
 	width: 400px;
@@ -147,7 +147,7 @@ section .waves .wave#wave4
 .cartoon-cloud-1 {
 	position: absolute;
 	z-index: 6;
-	bottom: 500px;
+	bottom: 35vh;
 	left: 0;
 	pointer-events: none;
 	animation: cloud-1-floating 100s linear infinite;
@@ -155,7 +155,7 @@ section .waves .wave#wave4
 .cartoon-cloud-2 {
 	position: absolute;
 	z-index: 6;
-	bottom: 450px;
+	bottom: 45vh;
 	left: 0;
 	pointer-events: none;
 	animation: cloud-2-floating 100s linear infinite;
@@ -163,7 +163,7 @@ section .waves .wave#wave4
 .cartoon-cloud-3 {
 	position: absolute;
 	z-index: 6;
-	bottom: 600px;
+	bottom: 40vh;
 	left: 0;
 	pointer-events: none;
 	animation: cloud-3-floating 100s linear infinite;
@@ -171,7 +171,7 @@ section .waves .wave#wave4
 .cartoon-cloud-4 {
 	position: absolute;
 	z-index: 6;
-	bottom: 550px;
+	bottom: 35vh;
 	left: 0;
 	pointer-events: none;
 	animation: cloud-4-floating 100s linear infinite;
@@ -179,7 +179,7 @@ section .waves .wave#wave4
 .cartoon-sun {
 	position: absolute;
 	z-index: 5;
-	bottom: 500px;
+	bottom: 35vh;
 	left: 100px;
 	pointer-events: none;
 	animation: sun-shining 2s linear infinite;
