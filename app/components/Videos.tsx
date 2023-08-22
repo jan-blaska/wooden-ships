@@ -31,7 +31,7 @@ const Videos = () => {
 				<div className="flex flex-wrap justify-center gap-10 lg:max-w-7xl">
 					{youtubeVideos.map(video => (
 						<div key={video.id} className="text-white">
-							<iframe width={windowWidthMobile ? 300 : 560} height={windowWidthMobile ? 170 : 320} src={video.src} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+							<iframe width={windowWidthMobile ? 300 : 560} height={windowWidthMobile ? 170 : 320} src={video.src} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
 							</iframe>
 							{/* <h3 className="text-xl mt-1">{video.name}</h3> */}
 						</div>
