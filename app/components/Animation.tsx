@@ -4,77 +4,65 @@ import Image from 'next/image';
 
 const Animation = () => {
 	return (
-		<div className="wave-container">
+		<div className="animation-container">
 			<section>
-				<div className='waves'>
-					<div className="cloud-1">
-						<Image
-							src="cartoon-clouds/cartoon-cloud-1.svg"
-							className='cartoon-cloud-1'
-							alt="cartoon-cloud-1"
-							height={0}
-							width={0}
-							sizes="100vw"
-							style={{ width: "250px" }}
-						/>
-						<Image
-							src="cartoon-clouds/cartoon-cloud-2.svg"
-							className='cartoon-cloud-2'
-							alt="cartoon-cloud-2"
-							height={0}
-							width={0}
-							sizes="100vw"
-							style={{ width: "250px" }}
-						/>
-						<Image
-							src="cartoon-clouds/cartoon-cloud-3.svg"
-							className='cartoon-cloud-3'
-							alt="cartoon-cloud-3"
-							height={0}
-							width={0}
-							sizes="100vw"
-							style={{ width: "250px" }}
-						/>
-						<Image
-							src="cartoon-clouds/cartoon-cloud-4.svg"
-							className='cartoon-cloud-4'
-							alt="cartoon-cloud-4"
-							height={0}
-							width={0}
-							sizes="100vw"
-							style={{ width: "250px" }}
-						/>
-						<Image
-							src="cartoon-clouds/cartoon-sun-2.svg"
-							className='cartoon-sun'
-							alt="cartoon-sun"
-							height={0}
-							width={0}
-							sizes="100vw"
-							style={{ width: "180px" }}
-						/>
-					</div>
-
+				<div className='animations'>
+					<Image
+						src="cartoon-clouds/cartoon-cloud-1.svg"
+						className='cartoon-cloud-1 w-[180px] md:w-[250px]'
+						alt="cartoon-cloud-1"
+						height={0}
+						width={0}
+						sizes="100vw"
+					/>
+					<Image
+						src="cartoon-clouds/cartoon-cloud-2.svg"
+						className='cartoon-cloud-2 w-[180px] md:w-[250px]'
+						alt="cartoon-cloud-2"
+						height={0}
+						width={0}
+						sizes="100vw"
+					/>
+					<Image
+						src="cartoon-clouds/cartoon-cloud-3.svg"
+						className='cartoon-cloud-3 w-[180px] md:w-[250px]'
+						alt="cartoon-cloud-3"
+						height={0}
+						width={0}
+						sizes="100vw"
+					/>
+					<Image
+						src="cartoon-clouds/cartoon-cloud-4.svg"
+						className='cartoon-cloud-4 w-[180px] md:w-[250px]'
+						alt="cartoon-cloud-4"
+						height={0}
+						width={0}
+						sizes="100vw"
+					/>
+					<Image
+						src="cartoon-clouds/cartoon-sun-2.svg"
+						className='cartoon-sun w-[120px] md:w-[180px]'
+						alt="cartoon-sun"
+						height={0}
+						width={0}
+						sizes="100vw"
+					/>
 					<Image
                         src="/logos/wooden-ships-logo-just-text-white.svg"
-                        className='logo-cloud'
+                        className='logo-cloud w-[200px] h-[200px] md:w-[300px] md:h-[300px]'
                         alt="band-logo"
-                        height={220}
-                        width={220}
+                        height={0}
+						width={0}
+						sizes="100vw"
                     />
-					{/* <h2>Wooden<br />ships</h2> */}
-
-					<div className="boat">
-						<Image
-							src="/pirate-boat.svg"
-							className='pirate-boat'
-							alt="pirate-boat"
-							height={0}
-							width={0}
-							sizes="100vw"
-							style={{ width: "450px" }}
-						/>
-					</div>
+					<Image
+						src="/pirate-boat.svg"
+						className='pirate-boat w-[250px] md:w-[450px]'
+						alt="pirate-boat"
+						height={0}
+						width={0}
+						sizes="100vw"
+					/>
 					<div className="wave" id="wave1"></div>
 					<div className="wave" id="wave2"></div>
 					<div className="wave" id="wave3"></div>

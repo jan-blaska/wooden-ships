@@ -2,50 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-body
-{
+body {
 	background-color: black;
 	overflow-x: hidden;
 }
 
-
-/* WAVE ANIMATION */
-.wave-container
-{
+/* ANIMATION */
+.animation-container {
 	margin-top: 144px;
 	display: flex;	
+	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-	flex-direction: column;
 	min-height: 60vh;
 	background: #6AD3FE;
 }
 
-section
-{
-	position: relative;
+section {
 	width: 100%;
 }
 
-section .waves
-{
-	position: relative;
-	
-} 
+section .animations {
+	position: relative;	
+}
 
-section .waves h2
-{
-	color: grey;
-	font-size: 110px;
-	line-height: 110px;
-	bottom: 400px;
-	font-weight: 900;
-
-	
-} 
-
-section .waves .wave
-{
+section .animations .wave {
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -55,60 +36,41 @@ section .waves .wave
 	background-size: 1000px 100px;
 } 
 
-section .waves .wave#wave1
-{
+section .animations .wave#wave1 {
 	opacity: 1;
 	bottom: 0;
 	z-index: 10;
 	animation: animate-wave 4s linear infinite;
 }
 
-section .waves .wave#wave2
-{
+section .animations .wave#wave2 {
 	opacity: 0.5;
 	bottom: 10px;
 	z-index: 9;
 	animation: animate-wave2 4s linear infinite;
 }
 
-section .waves .wave#wave3
-{
+section .animations .wave#wave3 {
 	opacity: 0.2;
 	bottom: 15px;
 	z-index: 8;
 	animation: animate-wave 2s linear infinite;
 }
 
-section .waves .wave#wave4
-{
+section .animations .wave#wave4 {
 	opacity: 0.7;
 	bottom: 20px;
 	z-index: 9;
 	animation: animate-wave 2s linear infinite;
 }
 
-@keyframes animate-wave
-{
-	0%
-	{
-		background-position-x: 1000px;
-	}
-	100%
-	{
-		background-position-x: 0px;
-	}
+@keyframes animate-wave {
+	0% {background-position-x: 1000px;}
+	100% {background-position-x: 0px;}
 }
-
-@keyframes animate-wave2
-{
-	0%
-	{
-		background-position-x: 0px;
-	}
-	100%
-	{
-		background-position-x: 1000px;
-	}
+@keyframes animate-wave2 {
+	0%{background-position-x: 0px;}
+	100%{background-position-x: 1000px;}
 }
 
 .logo-cloud {
@@ -116,7 +78,6 @@ section .waves .wave#wave4
 	bottom: 20vh;
 	left: -200px;
 	transform: translateX(50vw);
-	width: 400px;
 	align-self: center;
 }
 
@@ -126,12 +87,10 @@ section .waves .wave#wave4
 	z-index: 7;
 	left: 0;
 	pointer-events: none;
-	
 	animation: boat-floating 10s linear infinite;
 }
 
-@keyframes boat-floating
-{
+@keyframes boat-floating {
 	0%
 	{transform: rotate(0deg) translateX(100vw);}
 	25%
@@ -185,49 +144,37 @@ section .waves .wave#wave4
 	animation: sun-shining 2s linear infinite;
 }
 
-@keyframes cloud-1-floating
-{
+@keyframes cloud-1-floating {
 	0%
 	{transform: translateX(-20vw);}
-	
 	100%
 	{transform: translateX(50vw);}
 }
-@keyframes cloud-2-floating
-{
+@keyframes cloud-2-floating {
 	0%
 	{transform: translateX(10vw);}
-	
 	100%
 	{transform: translateX(80vw);}
 }
-@keyframes cloud-3-floating
-{
+@keyframes cloud-3-floating {
 	0%
 	{transform: translateX(30vw);}
-	
 	100%
 	{transform: translateX(100vw);}
 }
-@keyframes cloud-4-floating
-{
+@keyframes cloud-4-floating {
 	0%
 	{transform: translateX(60vw);}
-	
 	100%
 	{transform: translateX(130vw);}
 }
-@keyframes sun-shining
-{
+@keyframes sun-shining {
 	0%
 	{transform: scale(1);}
-	
 	50%
 	{transform: scale(1.2);}
-
 	100%
 	{transform: scale(1);}
-
 }
 
 .under-water {
@@ -239,7 +186,6 @@ section .waves .wave#wave4
 	background-color: #00B2F4;
 	width: 100%;
 }
-
 
 .under-water-divider {
 	margin-top: 250px;
@@ -260,6 +206,7 @@ section .waves .wave#wave4
 	background-attachment: fixed;
 }
 
+/* FOOTER */
 .footer {
 	background-image: url('/images/wooden-ships-plakat-dokoran-hd.png');
 	text-shadow: 1px 1px 50px white, 0 0 1em white, 0 0 0.2em white;
