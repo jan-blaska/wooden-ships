@@ -31,37 +31,37 @@ section .animations .wave {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 100px;
+	height: 50px;
 	background: url(../public/wavesvg.svg);
-	background-size: 1000px 100px;
-} 
+	background-size: 500px 50px;
+}
 
 section .animations .wave#wave1 {
 	opacity: 1;
 	bottom: 0;
 	z-index: 10;
-	animation: animate-wave 4s linear infinite;
+	animation: animate-wave 20s linear infinite;
 }
 
 section .animations .wave#wave2 {
-	opacity: 0.5;
+	opacity: 0.8;
 	bottom: 10px;
 	z-index: 9;
-	animation: animate-wave2 4s linear infinite;
+	animation: animate-wave2 20s linear infinite;
 }
 
 section .animations .wave#wave3 {
 	opacity: 0.2;
 	bottom: 15px;
 	z-index: 8;
-	animation: animate-wave 2s linear infinite;
+	animation: animate-wave 10s linear infinite;
 }
 
 section .animations .wave#wave4 {
 	opacity: 0.7;
 	bottom: 20px;
 	z-index: 9;
-	animation: animate-wave 2s linear infinite;
+	animation: animate-wave 10s linear infinite;
 }
 
 @keyframes animate-wave {
@@ -76,98 +76,170 @@ section .animations .wave#wave4 {
 .logo-cloud {
 	position: absolute;
 	bottom: 20vh;
-	left: -200px;
-	transform: translateX(50vw);
+	left: 50%;
+	transform: translateX(-50%);
 	align-self: center;
+	overflow-x: hidden;
 }
 
 .pirate-boat {
+	display: block;
 	position: absolute;
 	bottom: 40px;
 	z-index: 7;
-	left: 0;
 	pointer-events: none;
-	animation: boat-floating 10s linear infinite;
+	left: 50%;
+	animation: boat-floating 20s linear infinite;
+	overflow-x: hidden;
 }
 
 @keyframes boat-floating {
 	0%
-	{transform: rotate(0deg) translateX(100vw);}
+	{transform: rotate(0deg) translateX(-50%);}
 	25%
-	{transform: rotate(3deg) translateX(67.5vw);}
+	{transform: rotate(5deg) translateX(-50%);}
 	50%
-	{transform: rotate(0deg) translateX(35vw);}
+	{transform: rotate(0deg) translateX(-50%);}
 	75%
-	{transform: rotate(-3deg) translateX(2.5vw);}
+	{transform: rotate(-5deg) translateX(-50%);}
 	100%
-	{transform: rotate(0deg) translateX(-30vw);}
+	{transform: rotate(0deg) translateX(-50%);}
+}
+
+@media (min-width: 768px) {
+	@keyframes boat-floating {
+		0%
+		{transform: rotate(0deg) translateX(80vw);}
+		25%
+		{transform: rotate(3deg) translateX(40vw);}
+		50%
+		{transform: rotate(0deg) translateX(0vw);}
+		75%
+		{transform: rotate(-3deg) translateX(-40vw);}
+		100%
+		{transform: rotate(0deg) translateX(-80vw);}
+	}
+}
+
+.cartoon-cloud-1,
+.cartoon-cloud-2,
+.cartoon-cloud-3,
+.cartoon-cloud-4 {
+	position: absolute;
+	left: 0;
+	pointer-events: none;
+	overflow-x: hidden;
+	z-index: 6;
 }
 
 .cartoon-cloud-1 {
-	position: absolute;
-	z-index: 6;
 	bottom: 35vh;
-	left: 0;
-	pointer-events: none;
-	animation: cloud-1-floating 100s linear infinite;
 }
 .cartoon-cloud-2 {
-	position: absolute;
-	z-index: 6;
 	bottom: 45vh;
-	left: 0;
-	pointer-events: none;
-	animation: cloud-2-floating 100s linear infinite;
 }
 .cartoon-cloud-3 {
-	position: absolute;
-	z-index: 6;
 	bottom: 40vh;
-	left: 0;
-	pointer-events: none;
-	animation: cloud-3-floating 100s linear infinite;
 }
 .cartoon-cloud-4 {
-	position: absolute;
-	z-index: 6;
 	bottom: 35vh;
-	left: 0;
-	pointer-events: none;
-	animation: cloud-4-floating 100s linear infinite;
-}
-.cartoon-sun {
-	position: absolute;
-	z-index: 5;
-	bottom: 35vh;
-	left: 100px;
-	pointer-events: none;
-	animation: sun-shining 2s linear infinite;
 }
 
-@keyframes cloud-1-floating {
-	0%
-	{transform: translateX(-20vw);}
-	100%
-	{transform: translateX(50vw);}
+@media (min-width: 768px) {
+	.cartoon-cloud-1 {
+		animation: cloud-1-floating 100s linear infinite;
+	}
+	.cartoon-cloud-2 {
+		animation: cloud-2-floating 100s linear infinite;
+	}
+	.cartoon-cloud-3 {
+		animation: cloud-3-floating 100s linear infinite;
+	}
+	.cartoon-cloud-4 {
+		animation: cloud-4-floating 100s linear infinite;
+	}
+	@keyframes cloud-1-floating {
+		0%
+		{transform: translateX(-20vw); opacity: 0;}
+		5%
+		{opacity: 1;}
+		90%
+		{opacity: 1;}
+		100%
+		{transform: translateX(50vw); opacity: 0;} 
+	}
+	@keyframes cloud-2-floating {
+		0%
+		{transform: translateX(10vw); opacity: 0;}
+		5%
+		{opacity: 1;}
+		90%
+		{opacity: 1;}
+		100%
+		{transform: translateX(80vw); opacity: 0;}
+	}
+	@keyframes cloud-3-floating {
+		0%
+		{transform: translateX(30vw); opacity: 0;}
+		25%
+		{opacity: 0;}
+		30%
+		{opacity: 1;}
+		90%
+		{opacity: 1;}
+		100%
+		{transform: translateX(100vw); opacity: 0;}
+	}
+	@keyframes cloud-4-floating {
+		0%
+		{transform: translateX(60vw); opacity: 0;}
+		5%
+		{opacity: 1;}
+		90%
+		{opacity: 1;}
+		100%
+		{transform: translateX(130vw); opacity: 0;}
+	}
 }
-@keyframes cloud-2-floating {
-	0%
-	{transform: translateX(10vw);}
-	100%
-	{transform: translateX(80vw);}
+
+@media (max-width: 767px) {
+	.cartoon-cloud-2 {
+		animation: cloud-2-floating 20s linear infinite;
+	}
+	.cartoon-cloud-3 {
+		animation: cloud-3-floating 20s linear infinite;
+	}
+	@keyframes cloud-2-floating {
+		0%
+		{transform: translateX(0vw); opacity: 0;}
+		10%
+		{opacity: 1;}
+		80%
+		{opacity: 1;}
+		100%
+		{transform: translateX(20vw); opacity: 0;}
+	}
+	@keyframes cloud-3-floating {
+		0%
+		{transform: translateX(40vw); opacity: 0;}
+		25%
+		{opacity: 0;}
+		35%
+		{opacity: 1;}
+		80%
+		{opacity: 1;}
+		100%
+		{transform: translateX(60vw); opacity: 0;}
+	}
 }
-@keyframes cloud-3-floating {
-	0%
-	{transform: translateX(30vw);}
-	100%
-	{transform: translateX(100vw);}
+
+.cartoon-sun {
+	z-index: 5;
+	pointer-events: none;
+	animation: sun-shining 2s linear infinite;
+	overflow-x: hidden;
 }
-@keyframes cloud-4-floating {
-	0%
-	{transform: translateX(60vw);}
-	100%
-	{transform: translateX(130vw);}
-}
+
 @keyframes sun-shining {
 	0%
 	{transform: scale(1);}
@@ -180,9 +252,9 @@ section .animations .wave#wave4 {
 .under-water {
 	position: absolute;
 	z-index: 8;
-	top: -50px;
+	top: -20px;
 	display: block;
-	height: 300px;
+	height: 200px;
 	background-color: #00B2F4;
 	width: 100%;
 }

@@ -4,6 +4,11 @@ import { Nunito } from 'next/font/google';
 const font = Nunito({ subsets: ['latin'] })
 
 export const metadata = {
+	viewport: {
+		width: 'device-width',
+		initialScale: 1,
+		maximumScale: 1
+	},
 	title: 'Wooden Ships',
 	description: 'hard rock-blues Jičín',
 	icons: {
@@ -24,6 +29,9 @@ export default function RootLayout({
 	return (
 
 		<html lang="cs">
+			<head>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+			</head>
 			<body className={font.className}>
 				{children}
 			</body>

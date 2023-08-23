@@ -22,7 +22,7 @@ const Navbar = () => {
 
 	return (
 		<div>
-			<nav id="top" className={`${scroll ? 'h-18' : 'h-36'} fixed w-full bg-black z-20 top-0 left-0 right-0`} >
+			<nav id="top" className={`${scroll ? 'h-18' : 'h-36'} fixed w-screen bg-black z-20 top-0 left-0`} >
 				<div className="justify-between px-0 py-6 mx-auto md:flex md:items-center md:pr-8 lg:max-w-7xl">
 					<div>
 						<div className="flex justify-between items-center pl-8">
@@ -57,7 +57,7 @@ const Navbar = () => {
 							</div>
 						</div>
 					</div>
-
+					
 					<div
 						className={`md:block bg-black mt-7 md:mt-0
 								${navbar ? '' : 'hidden'} `}

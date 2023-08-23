@@ -9,7 +9,7 @@ const Animation = () => {
 				<div className='animations'>
 					<Image
 						src="cartoon-clouds/cartoon-cloud-1.svg"
-						className='cartoon-cloud-1 w-[180px] md:w-[250px]'
+						className='cartoon-cloud-1 w-[180px] md:w-[250px] hidden md:block'
 						alt="cartoon-cloud-1"
 						height={0}
 						width={0}
@@ -33,7 +33,7 @@ const Animation = () => {
 					/>
 					<Image
 						src="cartoon-clouds/cartoon-cloud-4.svg"
-						className='cartoon-cloud-4 w-[180px] md:w-[250px]'
+						className='cartoon-cloud-4 w-[180px] md:w-[250px] hidden md:block'
 						alt="cartoon-cloud-4"
 						height={0}
 						width={0}
@@ -41,7 +41,7 @@ const Animation = () => {
 					/>
 					<Image
 						src="cartoon-clouds/cartoon-sun-2.svg"
-						className='cartoon-sun w-[120px] md:w-[180px]'
+						className='cartoon-sun absolute left-4 md:left-12 bottom-[40vh] w-[120px] md:w-[180px]'
 						alt="cartoon-sun"
 						height={0}
 						width={0}
