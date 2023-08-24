@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 /
 ### Try the deployed site on the vercel:
-[deployed site](https://wooden-ships-lwam2qewp-jan-blaska.vercel.app/)
+[deployed site](https://wooden-ships-itj6pm22l-jan-blaska.vercel.app/)
 
 /
 /
