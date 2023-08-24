@@ -14,19 +14,19 @@ const Footer = () => {
 						<Link href="https://www.facebook.com/woodenships68">
 							<Image
 								src="/social-media-icons/facebook.png"
-								className='p-1 icon rounded-lg hover:shadow-md hover:shadow-purple-600'
+								className='icon rounded-lg hover:shadow-md hover:shadow-purple-600'
 								alt="facebook-icon"
-								height={50}
-								width={50}
+								height={45}
+								width={45}
 							/>
 						</Link>
 						<Link href="https://bandzone.cz/woodenships">
 							<Image
-								src="/social-media-icons/bandzone.png"
+								src="/social-media-icons/bandzone-icon.png"
 								className='icon rounded-lg hover:shadow-md hover:shadow-purple-600'
 								alt="bandzone-icon"
-								height={50}
-								width={50}
+								height={45}
+								width={45}
 							/>
 						</Link>
 					</div>

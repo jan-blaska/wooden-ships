@@ -73,9 +73,7 @@ const Navbar = () => {
 									Videa
 								</Link>
 							</li>
-							<li 
-								onClick={() => setNavbar(!navbar)}
-								className="uppercase py-4 md:py-0 md:pl-8 text-xl text-white text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent cursor-pointer">
+							<li onClick={() => setNavbar(!navbar)} className="uppercase py-4 md:py-0 md:pl-8 text-xl text-white text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent cursor-pointer">
 								<Link to="concerts" offset={50} duration={700}>
 									Koncerty
 								</Link>

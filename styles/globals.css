@@ -272,7 +272,7 @@ section .animations .wave#wave4 {
 	width: 100%;
 	background-image: url(../public/images/band-green-light.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position: right;
 	display: table;
 	background-attachment: fixed;
 }
