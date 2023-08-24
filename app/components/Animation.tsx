@@ -9,7 +9,7 @@ const Animation = () => {
 				<div className='animations'>
 					<Image
 						src="cartoon-clouds/cartoon-cloud-1.svg"
-						className='cartoon-cloud-1 w-[180px] md:w-[250px] hidden md:block'
+						className='cartoon-cloud-1 w-[180px] md:w-[250px] hidden lg:block'
 						alt="cartoon-cloud-1"
 						height={0}
 						width={0}
@@ -25,7 +25,7 @@ const Animation = () => {
 					/>
 					<Image
 						src="cartoon-clouds/cartoon-cloud-3.svg"
-						className='cartoon-cloud-3 w-[180px] md:w-[250px]'
+						className='cartoon-cloud-3 w-[180px] md:w-[250px] lg:hidden xl:block'
 						alt="cartoon-cloud-3"
 						height={0}
 						width={0}
@@ -33,7 +33,7 @@ const Animation = () => {
 					/>
 					<Image
 						src="cartoon-clouds/cartoon-cloud-4.svg"
-						className='cartoon-cloud-4 w-[180px] md:w-[250px] hidden md:block'
+						className='cartoon-cloud-4 w-[180px] md:w-[250px] hidden lg:block'
 						alt="cartoon-cloud-4"
 						height={0}
 						width={0}
@@ -49,7 +49,7 @@ const Animation = () => {
 					/>
 					<Image
                         src="/logos/wooden-ships-logo-just-text-white.svg"
-                        className='logo-cloud w-[200px] h-[200px] md:w-[300px] md:h-[300px]'
+                        className='logo-cloud w-[200px] h-[200px] md:w-[300px] md:h-[300px] bottom-[25vh] md:bottom-[20vh]'
                         alt="band-logo"
                         height={0}
 						width={0}
@@ -57,7 +57,7 @@ const Animation = () => {
                     />
 					<Image
 						src="/pirate-boat.svg"
-						className='pirate-boat w-[250px] md:w-[450px]'
+						className='pirate-boat w-[250px] md:w-[350px] lg:w-[450px]'
 						alt="pirate-boat"
 						height={0}
 						width={0}
